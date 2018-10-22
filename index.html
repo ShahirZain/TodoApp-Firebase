@@ -1,0 +1,82 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-App</title>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Firebase Firestore -->
+      <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase-firestore.js"></script>
+      <style>
+      .btn1{
+          float: right;
+          color: white;
+          border: none;
+          padding: 0.8vh;
+          border-radius: 1px;
+      }
+        
+      </style>
+
+
+</head>
+<body>
+    
+
+
+
+    <nav>
+        <div class="nav-wrapper #8e24aa purple darken-1">
+          <a href="#" class="brand-logo center #8e24aa purple darken-1">TODO APP</a>
+         
+        </div>
+      </nav>
+
+      <div class="container  ">
+        <p class="flow-text blue-text text-darken-2">Add Item</p>
+        <div class="row">
+          <form action="JAVASCRIPT:void(0)" id="form">
+        <div class="input-field col s6">
+          <input placeholder="ENTER ITEM" id="item"  name = "name" type="text" class="validate" > 
+        </div>
+        <br>
+        <input type="submit" value="button" class=" waves-light btn bottom  #8e24aa purple darken-1">
+      </form>
+      <ul class="collection col s12" id="unoder">
+      </ul>
+
+    </div>
+      </div>
+
+
+
+
+
+      
+
+      
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyASArm0mSBSd-H-0kFsG1NQx1ZWh8ePg8Y",
+            authDomain: "todoapp-58c84.firebaseapp.com",
+            databaseURL: "https://todoapp-58c84.firebaseio.com",
+            projectId: "todoapp-58c84",
+            storageBucket: "todoapp-58c84.appspot.com",
+            messagingSenderId: "382035991172" 
+          };
+          firebase.initializeApp(config);
+
+          const db = firebase.firestore();
+
+          db.settings({timestampsInSnapshots: true});
+</script>
+<script src="js.js"></script>
+</body>
+</html>
